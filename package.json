@@ -1,0 +1,26 @@
+{
+  "name": "lesson1",
+  "version": "1.0.0",
+  "description": "our first app",
+  "main": "webserver.js",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaodan0307/lesson1-nodejs.git"
+  },
+  "author": "zhaodan0307",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaodan0307/lesson1-nodejs/issues"
+  },
+  "homepage": "https://github.com/zhaodan0307/lesson1-nodejs#readme"
+}

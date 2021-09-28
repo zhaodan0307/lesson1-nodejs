@@ -1,7 +1,7 @@
 // use http module to run in browser
 let http = require('http')
 let url = require('url')
-//let accounting = require('accounting')
+let accounting = require('accounting')
 
 // start web server
 http.createServer((req, res) => {
@@ -17,6 +17,7 @@ http.createServer((req, res) => {
     console.log(query)
 
     // grab subtotal param from url.  use parseFloat so js doesn't treat this as a string
+    //pass this as a float
     let subTotal = parseFloat(query.subtotal)
     //let subTotal = query.subtotal
 
@@ -25,9 +26,9 @@ http.createServer((req, res) => {
     let total = subTotal + tax
 
     // display all 3 values
-    res.write('<h2>Sub Total:</h2>' + subTotal +
-        '<br /><h2>Tax:</h2>' + tax +
-        '<br /><h2>Total:</h2>' + total)
+    res.write('<h2>Sub Total:</h2>' + accounting.formatMoney(subTotal) +
+        '<br /><h2>Tax:</h2>' + accounting.formatMoney(tax) +
+        '<br /><h2>Total:</h2>' + accounting.formatMoney(total))
 
     res.end()
 }).listen(3000)
